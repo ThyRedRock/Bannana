@@ -255,7 +255,10 @@ MonoBehaviour:
   blocksPerRow: 8
   numRows: 3
   gameOverText: {fileID: 771955731}
-  blockPrefabs: []
+  blockPrefabs:
+  - {fileID: 1000012185849280, guid: 43286c54c8bed5442893bc1938cf283a, type: 3}
+  - {fileID: 1000010171079592, guid: 26d57d34969a78c499e51e8df11f402a, type: 3}
+  - {fileID: 1000013701633072, guid: 2c3025bf857cae04d80a7fcb7d6ccdba, type: 3}
 --- !u!4 &209868413
 Transform:
   m_ObjectHideFlags: 0

@@ -80,8 +80,21 @@ public class Controller : MonoBehaviour
 		scalePrefab (prefab);
 
 		// STUDENT CODE TO SPAWN PREFABS GOES HERE
+		for(int row = 0; row < numRows; ++row)
+		{
+			for(int col = 0; col < blocksPerRow; ++col)
+			{
+				// calculate starting x and y location for this spawn
+        		float xLocation = startingX + (col * xOffset);
+        		float yLocation = startingY - (row * yOffset);
 
+       			// spawn a new block
+       			Instantiate(prefab, new Vector3(xLocation,yLocation, 0), Quaternion.identity);
+			}
 
+		}
+
+		
 		// STUDENT CODE TO SAFELY INCREASE PREFAB INDEX GOES HERE
 
 
@@ -109,10 +122,17 @@ public class Controller : MonoBehaviour
 	bool anyBlocksLeft()
 	{
 		// STUDENT CODE TO FIND IF ALL BLOCKS ARE GONE GOES HERE
+		if(GameObject.FindWithTag("block") != null)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		 
 
-
-		// no block found
-		return false;
+		
 	}
 
 	// This utility function will calculate the size, starting positions,
